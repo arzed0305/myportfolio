@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jan Ryan Hernandez – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F7FD; --ink:#0F1F3D; --muted:#4F6082; --rule:#D3DEEF; --accent:#1D4ED8; --chip:#E2EBFA;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0C1526;--ink:#E6EDF9;--muted:#93A4C3;--rule:#22314D;--accent:#7FB0FF;--chip:#16233B}
+}
+:root[data-theme="dark"]{--bg:#0C1526;--ink:#E6EDF9;--muted:#93A4C3;--rule:#22314D;--accent:#7FB0FF;--chip:#16233B}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+main{max-width:760px;margin:0 auto;padding:72px 24px 96px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1{font:500 clamp(2.6rem,8vw,4.2rem)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 14px}
+.role{font:400 1.25rem/1.4 var(--serif);color:var(--accent);margin:0 0 22px}
+.intro{font:400 1.2rem/1.6 var(--serif);max-width:60ch;margin:0}
+section{margin-top:72px}
+.resume-link{margin:24px 0 0;font-weight:500}
+h2{font:600 1.5rem/1.2 var(--serif);margin:0 0 28px;letter-spacing:-.01em}
+
+.work{border-top:1px solid var(--rule);padding:28px 0}
+.work:last-of-type{border-bottom:1px solid var(--rule)}
+.work h3{font:600 1.3rem/1.3 var(--serif);margin:0 0 4px}
+.where{color:var(--muted);font-size:.9rem;margin:0 0 14px}
+.work p.what{margin:0 0 10px;max-width:62ch}
+.work dl{margin:14px 0 0;display:grid;grid-template-columns:7rem 1fr;gap:8px 16px;max-width:64ch}
+.work dt{color:var(--muted);font-size:.9rem}
+.work dd{margin:0}
+@media (max-width:600px){main{padding-top:48px}.work dl{grid-template-columns:1fr;gap:0}.work dd{margin-bottom:10px}}
+.tools{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.tools{gap:10px}
+.tools li{position:relative;display:grid;place-items:center;width:42px;height:42px;padding:0;border-radius:10px;background:var(--chip);border:1px solid var(--rule);color:var(--accent);cursor:default}
+.tools svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tools li::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:4px 10px;border-radius:6px;font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:2}
+.tools li:first-child::after{left:0;transform:none}
+.tools li:hover::after,.tools li:focus-visible::after{opacity:1}
+
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+.skills>div{background:var(--chip);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:12px;padding:24px}
+.skills h3{font:600 1.15rem/1.3 var(--serif);margin:0 0 12px;color:var(--accent)}
+.skills ul{margin:0;padding-left:18px}
+
+.contact{border-top:1px solid var(--rule);padding-top:48px}
+.contact p{margin:0 0 6px}
+#contact-form{display:grid;gap:6px;max-width:520px;margin:0 0 24px}
+#contact-form label{font-size:.9rem;color:var(--muted);margin-top:10px}
+#contact-form input,#contact-form textarea{width:100%;font:inherit;color:var(--ink);background:var(--chip);border:1px solid var(--rule);border-radius:8px;padding:10px 12px}
+#contact-form textarea{resize:vertical;min-height:120px}
+#contact-form button{justify-self:start;margin-top:16px;font:500 .95rem var(--sans);padding:10px 22px;border:0;border-radius:8px;background:var(--accent);color:var(--bg);cursor:pointer}
+#contact-form button:hover{filter:brightness(1.1)}
+#cf-status{margin:10px 0 0;color:var(--muted);font-size:.9rem}
+.coffee{height:1.75rem;width:auto;flex:none;order:2}
+.contact-head{display:flex;align-items:baseline;gap:12px;margin:0 0 24px}
+.contact-head h2{margin:0}
+.contact .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sql" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+  <symbol id="i-excel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+  <symbol id="i-ppt" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M7 12l3-3 3 2 4-4"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M7.5 12H11l4-5.2M11 12l4 5.2"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="5" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.7 10.6l6.6-4.2M8.7 13.4l6.6 4.2"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M7 10h10M7 13h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.6 3-6 7-6s7 2.4 7 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14c3 .2 5 2 5 5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 9l1.5 1.5L14 7M9 15h6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></symbol>
+</svg>
+<main>
+  <header>
+    <h1>Jan Ryan Hernandez</h1>
+    <p class="role">Virtual Professional</p>
+    <p class="intro">I turn repetitive reporting and messy operations into clear, automated, well-organized workflows. Over 15 years in customer support, analysis and team leadership.</p>
+  </header>
+  <p class="resume-link"><a href="https://claude.ai/artifact/27eM9dJT3fSgAwSqEERtAP">View my full resume</a></p>
+
+  <section aria-labelledby="work">
+    <h2 id="work">Selected work</h2>
+
+    <article class="work">
+      <h3>Report automation and user tools</h3>
+      <p class="where">Business Intelligence Group, JPMorgan Chase, 2024 to 2026</p>
+      <p class="what">Built automated reports and simple tools for business users so repetitive tasks no longer ate their time and manual errors dropped. The analysis fed management from Vice President to Executive Director.</p>
+      <dl>
+        <dt>Tools</dt>
+        <dd><ul class="tools"><li tabindex="0" aria-label="Alteryx" data-tip="Alteryx"><svg aria-hidden="true"><use href="#i-flow"/></svg></li><li tabindex="0" aria-label="SQL" data-tip="SQL"><svg aria-hidden="true"><use href="#i-sql"/></svg></li><li tabindex="0" aria-label="Excel" data-tip="Excel"><svg aria-hidden="true"><use href="#i-excel"/></svg></li><li tabindex="0" aria-label="SharePoint" data-tip="SharePoint"><svg aria-hidden="true"><use href="#i-share"/></svg></li><li tabindex="0" aria-label="HTML" data-tip="HTML"><svg aria-hidden="true"><use href="#i-code"/></svg></li></ul></dd>
+      </dl>
+    </article>
+
+    <article class="work">
+      <h3>Queue Management Academy</h3>
+      <p class="where">Training program I started and ran, JPMorgan Chase</p>
+      <p class="what">Designed and facilitated a training program for a team of 20 with little or no experience in data analysis and reporting, and helped them build those skills.</p>
+      <dl>
+        <dt>Skills used</dt>
+        <dd><ul class="tools"><li tabindex="0" aria-label="Training design" data-tip="Training design"><svg aria-hidden="true"><use href="#i-cap"/></svg></li><li tabindex="0" aria-label="Coaching" data-tip="Coaching"><svg aria-hidden="true"><use href="#i-chat"/></svg></li><li tabindex="0" aria-label="People management" data-tip="People management"><svg aria-hidden="true"><use href="#i-people"/></svg></li></ul></dd>
+      </dl>
+    </article>
+
+    <article class="work">
+      <h3>Workforce reporting for management</h3>
+      <p class="where">Business Process Senior Specialist, JPMorgan Chase, 2017 to 2022</p>
+      <p class="what">Created reports and analysis on the workforce side of the business. Management reviewed and presented them to support business decisions.</p>
+      <dl>
+        <dt>Tools</dt>
+        <dd><ul class="tools"><li tabindex="0" aria-label="Excel" data-tip="Excel"><svg aria-hidden="true"><use href="#i-excel"/></svg></li><li tabindex="0" aria-label="PowerPoint" data-tip="PowerPoint"><svg aria-hidden="true"><use href="#i-ppt"/></svg></li><li tabindex="0" aria-label="SQL" data-tip="SQL"><svg aria-hidden="true"><use href="#i-sql"/></svg></li><li tabindex="0" aria-label="Alteryx" data-tip="Alteryx"><svg aria-hidden="true"><use href="#i-flow"/></svg></li><li tabindex="0" aria-label="SharePoint" data-tip="SharePoint"><svg aria-hidden="true"><use href="#i-share"/></svg></li></ul></dd>
+      </dl>
+    </article>
+
+    <article class="work">
+      <h3>Process improvement</h3>
+      <p class="where">Business analyst work, JPMorgan Chase</p>
+      <p class="what">Improved standard operating procedures by suggesting process changes and automating the reporting behind them.</p>
+      <dl>
+        <dt>Skills used</dt>
+        <dd><ul class="tools"><li tabindex="0" aria-label="SOP improvement" data-tip="SOP improvement"><svg aria-hidden="true"><use href="#i-check"/></svg></li><li tabindex="0" aria-label="Automation" data-tip="Automation"><svg aria-hidden="true"><use href="#i-bolt"/></svg></li><li tabindex="0" aria-label="Business analysis" data-tip="Business analysis"><svg aria-hidden="true"><use href="#i-chart"/></svg></li></ul></dd>
+      </dl>
+    </article>
+  </section>
+
+  <section class="skills" aria-label="Skills and tools">
+    <div>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Data extraction, processing, analysis and visualization</li>
+        <li>People management and coaching</li>
+        <li>Customer support and escalations</li>
+        <li>Schedule and inquiry handling</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <ul>
+        <li>Microsoft Excel, Word, PowerPoint</li>
+        <li>Microsoft SharePoint</li>
+        <li>SQL</li>
+        <li>Alteryx</li>
+        <li>HTML</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact">
+    <div class="contact-head">
+    <svg class="coffee" viewBox="0 0 96 80" aria-hidden="true" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M34 6c-4 5 4 8 0 14M46 4c-4 6 4 9 0 16M58 6c-4 5 4 8 0 14" stroke-width="2"/>
+      <path d="M20 30h48v12a24 24 0 0 1-24 24 24 24 0 0 1-24-24z" fill="var(--chip)"/>
+      <path d="M68 36h5a8 8 0 0 1 0 16h-8"/>
+      <ellipse cx="44" cy="70" rx="34" ry="5" fill="var(--chip)"/>
+    </svg>
+    <h2 id="contact">Let’s Grab a Virtual Coffee</h2>
+    </div>
+    <form id="contact-form">
+      <label for="cf-name">Enter Your Name Here</label>
+      <input id="cf-name" type="text" required autocomplete="name">
+      <label for="cf-email">Enter Your Email or Phone Number Here</label>
+      <input id="cf-email" type="text" autocomplete="email">
+      <label for="cf-msg">Message</label>
+      <textarea id="cf-msg" required></textarea>
+      <button type="submit">Send message</button>
+      <p id="cf-status" role="status"></p>
+    </form>
+    <script>
+    document.getElementById('contact-form').addEventListener('submit',function(e){
+      e.preventDefault();
+      var n=document.getElementById('cf-name').value.trim();
+      var f=document.getElementById('cf-email').value.trim();
+      var m=document.getElementById('cf-msg').value.trim();
+      var to=['janryan.hernandez','gmail.com'].join('@');
+      var url='mailto:'+to+'?subject='+encodeURIComponent('Portfolio Inquiry')+'&body='+encodeURIComponent(m+'\n\n'+n+(f?' ('+f+')':''));
+      var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';
+      document.body.appendChild(a);a.click();a.remove();
+      document.getElementById('cf-status').textContent='Your email app should open with the message ready. Press send there to finish.';
+    });
+    </script>
+  </section>
+</main>
+</body>
+</html>
